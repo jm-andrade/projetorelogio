@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Brasil Clock</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/cwdc/mainPage/LCG.css" />
+        <style>
+            :root {
+                --cgrena: black;
+                --cgreen: #446127;
+                --corange: yellow;
+                --cwhite: rgb(4, 3, 3);
+                --cwhite1: green;
+                --cwhite2: blue;
+                --cwhite3: blue;
+            }
+            body {
+                margin: 20px;
+            }
+            #clock,
+            #handles {
+                border: 5px solid #8b2439;
+                padding: 20px;
+                margin: 0px;
+            }
+            #flu {
+                width: 512px;
+                font-family: cursive;
+                text-align: center;
+                font-size: 30px;
+            }
+            #container {
+                position: relative;
+                height: 512px;
+                margin: 0px;
+                margin-bottom: 50px;
+            }
+            canvas {
+                position: absolute;
+            }
+            #handles {
+                z-index: 2;
+            }
+            #clock {
+                background-color: antiquewhite;
+                z-index: 1;
+            }
+        </style>
+    </head>
+
+    <body>
+        <p id="flu">
+            <a href="https://www.cbf.com.br/">Confederação Brasileira de Futebol</a>
+        </p>
+
+        <div id="container">
+            <canvas id="clock" width="512" height="512">
+                Please upgrade your browser.
+            </canvas>
+            <canvas id="handles" width="512" height="512">
+                Please upgrade your browser.
+            </canvas>
+        </div>
+        <br />
+        <p>
+            <audio title="Hino do Brasil" controls loop>
+                <source src="hinobr.mpeg" type="audio/mpeg" />
+                Please upgrade your browser!
+            </audio>
+
+            <small>
+                Hino do Brasil na copa das confederações - Partida contra Espanha
+                           </small>
+        </p>
+        <p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/NY0DsnYaO2g?si=XSz1z0C7QhIm0Onb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <br />
+            <small id="Renato">
+                Neymar está fora da copa
+                <a href="https://www.lance.com.br/futebol-internacional/neymar-recorda-lesao-2014-revela-que-nao-sentia-pernas-apos-golpe-diz-que-quase-parou-andar.html">
+                Confira</a>
+            </small>
+            <br />
+          
+        <script src="suncalc.js"></script>
+        <script src="clock.js"></script>
+        <script src="date.js"></script>
+        <script>
+            document.querySelector(
+                "#Rivelino"
+            ).innerHTML += `(há ${elapsedYears("1975-06-10")} anos atrás)`;
+            document.querySelector("#Renato").innerHTML += `(há ${elapsedYears(
+                "1995-06-25"
+            )} anos atrás)`;
+            document.querySelector("#Cano").innerHTML += `(há ${elapsedYears(
+                "2023-02-12"
+            )} anos atrás)`;
+        </script>
+    </body>
+</html>
